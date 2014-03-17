@@ -1,6 +1,6 @@
 {
-  "name": "backbone.collection.tree",
-  "main": "built/backbone.collection.tree.js",
+  "name": "backbone.model.tree",
+  "main": "built/backbone.model.tree.js",
   "version": "0.0.1",
   "description": "Tree representation with backbone.",
   "dependencies": {

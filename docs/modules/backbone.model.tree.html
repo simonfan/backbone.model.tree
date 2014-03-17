@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>src/__backbone.collection.tree/branch/index.js - backbone.collection.tree</title>
+    <title>backbone.model.tree - backbone.model.tree</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -15,7 +15,7 @@
     <div id="hd" class="yui3-g header">
         <div class="yui3-u-3-4">
             
-                <h1><img src="../assets/css/logo.png" title="backbone.collection.tree"></h1>
+                <h1><img src="../assets/css/logo.png" title="backbone.model.tree"></h1>
             
         </div>
         <div class="yui3-u-1-4 version">
@@ -45,7 +45,7 @@
 
             <ul id="api-modules" class="apis modules">
             
-                <li><a href="../modules/backbone.collection.tree.html">backbone.collection.tree</a></li>
+                <li><a href="../modules/backbone.model.tree.html">backbone.model.tree</a></li>
             
                 <li><a href="../modules/model.html">model</a></li>
             
@@ -84,88 +84,49 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1 class="file-heading">File: src/__backbone.collection.tree/branch/index.js</h1>
+                        <h1>backbone.model.tree Module</h1>
+<div class="box clearfix meta">
+    
 
-<div class="file">
-    <pre class="code prettyprint linenums">
-/**
- * AMD and CJS module.
- *
- * @module backbone.collection.tree
- * @submodule model
- */
+    
 
-/* jshint ignore:start */
-if (typeof define !== &#x27;function&#x27;) { var define = require(&#x27;amdefine&#x27;)(module) }
-/* jshint ignore:end */
+    
 
-define(function (require, exports, module) {
-	&#x27;use strict&#x27;;
-
-	// external
-	var Backbone = require(&#x27;backbone&#x27;),
-		Queryable = require(&#x27;backbone.collection.queryable&#x27;);
+    
+</div>
 
 
 
-	var Branches = module.exports = Queryable.extend({
-		initialize: function initializeBranchCollection(models, options) {
-			Queryable.prototype.initialize.apply(this, arguments);
-		},
-
-	})
+<div class="box intro">
+    
+</div>
 
 
 
-	var Branch = Backbone.Model.extend({
+<div class="yui3-g">
+    <div class="yui3-u-1-2">
+        
+    </div>
 
-		initialize: function initializeBranch(attributes, options) {
-			this.root = options.root;
-			this.branches = new Branches([], options);
-		},
+    <div class="yui3-u-1-2">
+        
+            <p>This module is a rollup of the following modules:</p>
 
-		defineBranch: function defineBranch(attributes) {
-			this.branches.add(attributes);
-			return this;
-		},
+            <ul class="module-submodules">
+            
+                <li class="module-submodule">
+                    <a href="../modules/model.html">
+                        model
+                    </a>
 
-		isLeaf: function isLeaf() {
-			return this.branches.length === 0;
-		},
-
-		selectBranch: function selectBranch(attributes) {
-			return this.branches.find(attributes);
-		},
-
-		sibling: function selectSibling(attributes) {
-			return this.root.selectBranch(attributes);
-		},
-
-		descendants: function selectDescendants(attributes) {
-
-			if (this.isLeaf()) {
-				// return simple array
-				return this;
-			} else {
-				// returns Lazy object
-				var immediate = this.selectBranch(attributes);
-
-				// returns Array
-				var distant = this.branches.map(function (branch) {
-					return branch.descendants(attributes);
-				});
-
-				return immediate.concat(distant);
-			}
-		},
-
-	});
-
-
-	Branches.prototype.model = Branch;
-});
-
-    </pre>
+                    <div class="module-submodule-description">
+                        AMD and CJS module.
+                    </div>
+                </li>
+            
+            </ul>
+        
+    </div>
 </div>
 
                     </div>

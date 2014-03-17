@@ -4,7 +4,7 @@
 		// node
 		'.././src' :
 		// browser
-		'backbone.collection.tree',
+		'backbone.model.tree',
 		// dependencies for the test
 		deps = [mod, 'should'];
 

@@ -45,7 +45,7 @@ module.exports = function (grunt) {
 
 		yuidoc: {
 			compile: {
-				name: 'backbone.collection.tree',
+				name: 'backbone.model.tree',
 				version: '0.0.0',
 			//	description: '',
 			// 	url: '',
@@ -103,9 +103,9 @@ module.exports = function (grunt) {
 					// (must coincide with that defined in mainConfigFile)
 					baseUrl: './src',
 					// module name
-					name: 'backbone.collection.tree',
+					name: 'backbone.model.tree',
 					// output here
-					out: 'built/backbone.collection.tree.js',
+					out: 'built/backbone.model.tree.js',
 					// config file
 					mainConfigFile: 'amdconfig.js',
 

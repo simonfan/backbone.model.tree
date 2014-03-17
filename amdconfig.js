@@ -6,7 +6,7 @@ require.config({
 		text: '../bower_components/requirejs-text/text',
 		mocha: '../node_modules/mocha/mocha',
 		should: '../node_modules/should/should',
-		'backbone.collection.tree': 'index',
+		'backbone.model.tree': 'index',
 		'backbone.collection.queryable': '../bower_components/backbone.collection.queryable/built/backbone.collection.queryable',
 		'backbone.collection.lazy': '../bower_components/backbone.collection.lazy/built/backbone.collection.lazy',
 		backbone: '../bower_components/backbone/backbone',

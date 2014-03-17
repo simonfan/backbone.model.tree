@@ -1,11 +1,11 @@
-//     backbone.collection.tree
+//     backbone.model.tree
 //     (c) simonfan
-//     backbone.collection.tree is licensed under the MIT terms.
+//     backbone.model.tree is licensed under the MIT terms.
 
 /**
  * AMD and CJS module.
  *
- * @module backbone.collection.tree
+ * @module backbone.model.tree
  * @submodule model
  */
 

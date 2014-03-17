@@ -126,20 +126,15 @@ define(function (require, exports, module) {
 		 * @param [depth] {Number}
 		 */
 		selectDescendants: function selectDescendants(query, depth) {
+			// returns Lazy object
+			var immediate = this.selectBranches(query);
 
-			if (!this.isLeaf()) {
-				// returns Lazy object
-				var immediate = this.selectBranches(query);
+			// branch-descendants
+			var far = this.branches.map(function (branch) {
+				return branch.selectDescendants(query);
+			}).compact();
 
-				// branch-descendants
-				var far = this.branches.map(function (branch) {
-					return branch.selectDescendants(query);
-				}).compact();
-
-				return immediate.concat(far);
-			} else {
-				return false;
-			}
+			return immediate.concat(far);
 		},
 
 		/**

@@ -146,7 +146,7 @@
         },
         {
             "file": "src/index.js",
-            "line": 145,
+            "line": 140,
             "description": "Checks whether this branch's branches collection\nhas any other branch models.",
             "itemtype": "method",
             "name": "isLeaf",
@@ -156,7 +156,7 @@
         },
         {
             "file": "src/index.js",
-            "line": 155,
+            "line": 150,
             "description": "Checks if this branch model has any ancestor.",
             "itemtype": "method",
             "name": "isRoot",

@@ -1,16 +1,16 @@
 {
   "name": "backbone.collection.tree",
   "main": "built/backbone.collection.tree.js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Tree representation with backbone.",
   "dependencies": {
-    "backbone.collection.queryable": "*"
+	"backbone.collection.queryable": "*"
   },
   "devDependencies": {
-    "requirejs": "*",
-    "requirejs-text": "*",
-    "underscore": "*",
-    "jquery": "*",
-    "qunit": "*"
+	"requirejs": "*",
+	"requirejs-text": "*",
+	"underscore": "*",
+	"jquery": "*",
+	"qunit": "*"
   }
 }

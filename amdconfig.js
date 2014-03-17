@@ -40,7 +40,7 @@ require.config({
 			exports: 'should'
 		},
 		lazy: {
-			exports: 'Lazy',
+			exports: 'Lazy'
 		}
 	}
 });

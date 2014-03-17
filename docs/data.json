@@ -4,26 +4,44 @@
         "version": "0.0.0"
     },
     "files": {
+        "src/__backbone.collection.tree/branch/index.js": {
+            "name": "src/__backbone.collection.tree/branch/index.js",
+            "modules": {
+                "model": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
         "src/index.js": {
             "name": "src/index.js",
-            "modules": {
-                "BackboneCollectionTree": 1
-            },
+            "modules": {},
             "classes": {},
             "fors": {},
             "namespaces": {}
         }
     },
     "modules": {
-        "BackboneCollectionTree": {
-            "name": "BackboneCollectionTree",
+        "backbone.collection.tree": {
+            "name": "backbone.collection.tree",
+            "submodules": {
+                "model": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "model": {
+            "name": "model",
             "submodules": {},
             "classes": {},
             "fors": {},
+            "is_submodule": 1,
             "namespaces": {},
-            "tag": "module",
-            "file": "src/index.js",
-            "line": 5,
+            "module": "backbone.collection.tree",
+            "namespace": "",
+            "file": "src/__backbone.collection.tree/branch/index.js",
+            "line": 1,
             "description": "AMD and CJS module."
         }
     },

@@ -2,12 +2,17 @@ YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [],
     "modules": [
-        "BackboneCollectionTree"
+        "backbone.collection.tree",
+        "model"
     ],
     "allModules": [
         {
-            "displayName": "BackboneCollectionTree",
-            "name": "BackboneCollectionTree",
+            "displayName": "backbone.collection.tree",
+            "name": "backbone.collection.tree"
+        },
+        {
+            "displayName": "model",
+            "name": "model",
             "description": "AMD and CJS module."
         }
     ]

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>src/index.js - backbone.collection.tree</title>
+    <title>src/__backbone.collection.tree/branch/index.js - backbone.collection.tree</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -84,14 +84,10 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1 class="file-heading">File: src/index.js</h1>
+                        <h1 class="file-heading">File: src/__backbone.collection.tree/branch/index.js</h1>
 
 <div class="file">
     <pre class="code prettyprint linenums">
-//     backbone.collection.tree
-//     (c) simonfan
-//     backbone.collection.tree is licensed under the MIT terms.
-
 /**
  * AMD and CJS module.
  *
@@ -112,18 +108,24 @@ define(function (require, exports, module) {
 
 
 
-	var Branches = Queryable.extend({});
+	var Branches = module.exports = Queryable.extend({
+		initialize: function initializeBranchCollection(models, options) {
+			Queryable.prototype.initialize.apply(this, arguments);
+		},
 
-	var Branch = module.exports = Backbone.Model.extend({
+	})
 
-		Branches: Branches,
 
-		initialize: function initializeBranch(attributes) {
-			this.branches = new this.Branches();
+
+	var Branch = Backbone.Model.extend({
+
+		initialize: function initializeBranch(attributes, options) {
+			this.root = options.root;
+			this.branches = new Branches([], options);
 		},
 
 		defineBranch: function defineBranch(attributes) {
-			this.branches.add.apply(this.branches, arguments);
+			this.branches.add(attributes);
 			return this;
 		},
 
@@ -135,23 +137,29 @@ define(function (require, exports, module) {
 			return this.branches.find(attributes);
 		},
 
-		descendants: function selectDescendants(attributes, depth) {
+		sibling: function selectSibling(attributes) {
+			return this.root.selectBranch(attributes);
+		},
 
-			if (!this.isLeaf()) {
+		descendants: function selectDescendants(attributes) {
+
+			if (this.isLeaf()) {
+				// return simple array
+				return this;
+			} else {
 				// returns Lazy object
 				var immediate = this.selectBranch(attributes);
 
-				// branch-descendants
-				var far = this.branches.map(function (branch) {
+				// returns Array
+				var distant = this.branches.map(function (branch) {
 					return branch.descendants(attributes);
-				}).compact();
+				});
 
-				return immediate.concat(far);
+				return immediate.concat(distant);
 			}
 		},
-	});
 
-	Branch.Branches = Branches;
+	});
 
 
 	Branches.prototype.model = Branch;

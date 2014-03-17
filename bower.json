@@ -4,13 +4,14 @@
   "version": "0.0.1",
   "description": "Tree representation with backbone.",
   "dependencies": {
-	"backbone.collection.queryable": "*"
+    "backbone.collection.queryable": "*",
+    "lodash": "~2.4.1"
   },
   "devDependencies": {
-	"requirejs": "*",
-	"requirejs-text": "*",
-	"underscore": "*",
-	"jquery": "*",
-	"qunit": "*"
+    "requirejs": "*",
+    "requirejs-text": "*",
+    "underscore": "*",
+    "jquery": "*",
+    "qunit": "*"
   }
 }

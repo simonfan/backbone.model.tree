@@ -39,6 +39,136 @@
         }
     },
     "classes": {},
-    "classitems": [],
-    "warnings": []
+    "classitems": [
+        {
+            "file": "src/index.js",
+            "line": 30,
+            "description": "The Branches Collection constructor. Refer to details\nat the extend method to see how stuff works here.",
+            "itemtype": "property",
+            "name": "Branches",
+            "class": "",
+            "module": "backbone.model.tree",
+            "submodule": "model"
+        },
+        {
+            "file": "src/index.js",
+            "line": 38,
+            "description": "CAUTION!\nExtend method has a special behaviour.\n(pretty dirty, but makes things much, MUCH nicer)",
+            "itemtype": "method",
+            "name": "extend",
+            "class": "",
+            "module": "backbone.model.tree",
+            "submodule": "model"
+        },
+        {
+            "file": "src/index.js",
+            "line": 71,
+            "description": "Creates an instance of this.Branches Collection.",
+            "itemtype": "method",
+            "name": "initialize",
+            "class": "",
+            "module": "backbone.model.tree",
+            "submodule": "model"
+        },
+        {
+            "file": "src/index.js",
+            "line": 80,
+            "description": "Creates a branch on this branch.\nAdds a model with the given attributes to this object branches collection.",
+            "itemtype": "method",
+            "name": "addBranch",
+            "params": [
+                {
+                    "name": "attributes",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "",
+            "module": "backbone.model.tree",
+            "submodule": "model"
+        },
+        {
+            "file": "src/index.js",
+            "line": 96,
+            "description": "Selects from this branch branches' collection\nall branches that are compatible with the query object given.\nSee backbone.collection.queryable, for the query object possibilities.\n\nReturns a Lazy Object(See Queryable)",
+            "itemtype": "method",
+            "name": "selectBranches",
+            "params": [
+                {
+                    "name": "query",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "",
+            "module": "backbone.model.tree",
+            "submodule": "model"
+        },
+        {
+            "file": "src/index.js",
+            "line": 110,
+            "description": "Retrieves sibling branches.",
+            "itemtype": "method",
+            "name": "selectSiblings",
+            "params": [
+                {
+                    "name": "query",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "",
+            "module": "backbone.model.tree",
+            "submodule": "model"
+        },
+        {
+            "file": "src/index.js",
+            "line": 121,
+            "description": "Retrieves all branch models that are descendant to this one.",
+            "itemtype": "method",
+            "name": "selectDescendants",
+            "params": [
+                {
+                    "name": "query",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "depth",
+                    "description": "",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "class": "",
+            "module": "backbone.model.tree",
+            "submodule": "model"
+        },
+        {
+            "file": "src/index.js",
+            "line": 145,
+            "description": "Checks whether this branch's branches collection\nhas any other branch models.",
+            "itemtype": "method",
+            "name": "isLeaf",
+            "class": "",
+            "module": "backbone.model.tree",
+            "submodule": "model"
+        },
+        {
+            "file": "src/index.js",
+            "line": 155,
+            "description": "Checks if this branch model has any ancestor.",
+            "itemtype": "method",
+            "name": "isRoot",
+            "class": "",
+            "module": "backbone.model.tree",
+            "submodule": "model"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: params with param",
+            "line": " src/index.js:80"
+        }
+    ]
 }
